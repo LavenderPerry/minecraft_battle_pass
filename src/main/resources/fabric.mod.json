@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "minecraft-battle-pass",
+  "id": "minecraft_battle_pass",
   "version": "${version}",
 
   "name": "Minecraft Battle Pass",
@@ -9,18 +9,18 @@
     "Lavender Perry"
   ],
   "contact": {
-    "homepage": "https://github.com/Lavender-Perry/minecraft-battle-pass",
-    "issues": "https://github.com/Lavender-Perry/minecraft-battle-pass/issues",
-    "sources": "https://github.com/Lavender-Perry/minecraft-battle-pass"
+    "homepage": "https://github.com/LavenderPerry/minecraft_battle_pass",
+    "issues": "https://github.com/LavenderPerry/minecraft_battle_pass/issues",
+    "sources": "https://github.com/LavenderPerry/minecraft_battle_pass"
   },
 
   "license": "Unlicense",
-  "icon": "assets/minecraft-battle-pass/icon.png",
+  "icon": "assets/minecraft_battle_pass/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.Lavender-Perry.MinecraftBattlePass"
+      "io.github.LavenderPerry.minecraft_battle_pass.MinecraftBattlePass"
     ]
   },
 

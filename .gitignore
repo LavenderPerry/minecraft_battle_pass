@@ -38,3 +38,6 @@ hs_err_*.log
 replay_*.log
 *.hprof
 *.jfr
+
+# idk what this is but its user specific (includes absolute paths)
+.factorypath
