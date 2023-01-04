@@ -1,38 +1,33 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "minecraft-battle-pass",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Minecraft Battle Pass",
+  "description": "A Minecraft Fabric mod that adds a battle pass and other things to Minecraft",
   "authors": [
-    "Me!"
+    "Lavender Perry"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/Lavender-Perry/minecraft-battle-pass",
+    "issues": "https://github.com/Lavender-Perry/minecraft-battle-pass/issues",
+    "sources": "https://github.com/Lavender-Perry/minecraft-battle-pass"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "Unlicense",
+  "icon": "assets/minecraft-battle-pass/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "io.github.Lavender-Perry.MinecraftBattlePass"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
 
   "depends": {
     "fabricloader": ">=0.14.11",
     "fabric-api": "*",
     "minecraft": "~1.19.3",
     "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
   }
 }
