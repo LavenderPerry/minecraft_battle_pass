@@ -5,9 +5,7 @@
 
   "name": "Minecraft Battle Pass",
   "description": "A Minecraft Fabric mod that adds a battle pass and other things to Minecraft",
-  "authors": [
-    "Lavender Perry"
-  ],
+  "authors": [ "Lavender Perry" ],
   "contact": {
     "homepage": "https://github.com/LavenderPerry/minecraft_battle_pass",
     "issues": "https://github.com/LavenderPerry/minecraft_battle_pass/issues",
@@ -19,10 +17,9 @@
 
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "io.github.LavenderPerry.minecraft_battle_pass.MinecraftBattlePass"
-    ]
+    "main": [ "io.github.LavenderPerry.minecraft_battle_pass.MinecraftBattlePass" ]
   },
+  "mixins": [ "minecraft_battle_pass.mixins.json" ],
 
   "depends": {
     "fabricloader": ">=0.14.11",

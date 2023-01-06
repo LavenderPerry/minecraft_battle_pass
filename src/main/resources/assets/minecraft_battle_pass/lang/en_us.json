@@ -1,3 +1,7 @@
 {
-  "item.minecraft_battle_pass.battle_pass": "Battle Pass"
+  "item.minecraft_battle_pass.battle_pass": "Battle Pass",
+  "item.minecraft_battle_pass.battle_pass.tooltip_new": "New drops: %d (use item to get)",
+  "item.minecraft_battle_pass.battle_pass.tooltip_0": "Level %d",
+  "item.minecraft_battle_pass.battle_pass.tooltip_1": "%d/%d xp to level up",
+  "minecraft_battle_pass.battle_passes_level_up": "%d of your battle passes leveled up"
 }

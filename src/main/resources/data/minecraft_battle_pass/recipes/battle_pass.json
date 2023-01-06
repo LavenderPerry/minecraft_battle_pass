@@ -1,13 +1,18 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:paper"
-    },
-    {
-      "item": "minecraft:emerald"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "EEE",
+    "EPE",
+    "EEE"
   ],
+  "key": {
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
   "result": {
     "item": "minecraft_battle_pass:battle_pass"
   }

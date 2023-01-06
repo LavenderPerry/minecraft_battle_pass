@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "io.github.LavenderPerry.minecraft_battle_pass.mixin",
+  "compatabilityLevel": "JAVA_17",
+  "mixins": [ "AddExperienceToBattlePassesMixin" ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
