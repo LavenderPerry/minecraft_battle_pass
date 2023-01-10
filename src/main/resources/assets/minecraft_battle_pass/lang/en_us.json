@@ -3,5 +3,10 @@
   "item.minecraft_battle_pass.battle_pass.tooltip_new": "New drops: %d (use item to get)",
   "item.minecraft_battle_pass.battle_pass.tooltip_0": "Level %d",
   "item.minecraft_battle_pass.battle_pass.tooltip_1": "%d/%d xp to level up",
-  "minecraft_battle_pass.battle_passes_level_up": "%d of your battle passes leveled up"
+  "item.minecraft_battle_pass.moms_credit_card": "Mom's credit card",
+  "item.minecraft_battle_pass.moms_credit_card.tooltip": "Use item to \"purchase\" things",
+  "minecraft_battle_pass.battle_passes_level_up": "%d of your battle passes leveled up",
+  "minecraft_battle_pass.mom_found_out": "Mom found out you took her credit card...",
+  "minecraft_battle_pass.moms_card_denied": "Mom's credit card got denied",
+  "minecraft_battle_pass.item_purchased_card": "%s purchased with mom's credit card"
 }

@@ -40,16 +40,18 @@ public class BattlePassItem extends Item {
       List<Text> tooltip,
       TooltipContext tooltipContext) {
     NbtCompound stackNbt = stack.getOrCreateNbt();
+
     int level = stackNbt.getInt("level");
     int unclaimedLevels = level - stackNbt.getInt("claimedLevels");
+
+    String translationKey = getTranslationKey();
+
     if (unclaimedLevels > 0) {
-      tooltip.add(Text.translatable(
-            "item.minecraft_battle_pass.battle_pass.tooltip_new",
-            unclaimedLevels).formatted(Formatting.AQUA));
+      tooltip.add(Text.translatable(translationKey + ".tooltip_new", unclaimedLevels)
+          .formatted(Formatting.AQUA));
     }
-    tooltip.add(Text.translatable("item.minecraft_battle_pass.battle_pass.tooltip_0",
-          level));
-    tooltip.add(Text.translatable("item.minecraft_battle_pass.battle_pass.tooltip_1",
+    tooltip.add(Text.translatable(translationKey + ".tooltip_0", level));
+    tooltip.add(Text.translatable(translationKey + ".tooltip_1",
           stackNbt.getInt("levelProgress"),
           getXpToNextLevel(level)));
   }
@@ -58,16 +60,20 @@ public class BattlePassItem extends Item {
   @Override
   public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
     ItemStack stack = user.getStackInHand(hand);
-    NbtCompound stackNbt = stack.getOrCreateNbt();
-    int level = stackNbt.getInt("level");
-    PlayerInventory playerInventory = user.getInventory();
 
-    for (int claimL = stackNbt.getInt("claimedLevels"); claimL < level; claimL++) {
-      playerInventory.offerOrDrop(new ItemStack(
-            claimL < DROPS.length ? DROPS[claimL] : Items.PAPER));
+    if (world.isClient()) {
+      NbtCompound stackNbt = stack.getOrCreateNbt();
+      int level = stackNbt.getInt("level");
+      PlayerInventory playerInventory = user.getInventory();
+
+      for (int claimL = stackNbt.getInt("claimedLevels"); claimL < level; claimL++) {
+        playerInventory.offerOrDrop(new ItemStack(
+              claimL < DROPS.length ? DROPS[claimL] : Items.PAPER));
+      }
+
+      stackNbt.putInt("claimedLevels", level);
     }
 
-    stackNbt.putInt("claimedLevels", level);
     return TypedActionResult.pass(stack);
   }
 

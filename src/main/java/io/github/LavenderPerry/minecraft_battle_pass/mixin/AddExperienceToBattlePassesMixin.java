@@ -13,7 +13,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.text.Text;
 
 @Mixin(PlayerEntity.class)
 public abstract class AddExperienceToBattlePassesMixin {
@@ -49,9 +48,9 @@ public abstract class AddExperienceToBattlePassesMixin {
     }
 
     if (battlePassesLeveledUp > 0) {
-      ((PlayerEntity)(Object)this).sendMessage(Text.translatable(
-        "minecraft_battle_pass.battle_passes_level_up",
-        battlePassesLeveledUp));
+      ((PlayerEntity)(Object)this)
+        .sendMessage(MinecraftBattlePass
+            .translatableText("battle_passes_level_up", battlePassesLeveledUp));
     }
   }
 }
