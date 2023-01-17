@@ -5,7 +5,10 @@
 
   "name": "Minecraft Battle Pass",
   "description": "A Minecraft Fabric mod that adds a battle pass and other things to Minecraft",
-  "authors": [ "Lavender Perry" ],
+  "authors": [
+    "Lavender Perry",
+    "Woop"
+  ],
   "contact": {
     "homepage": "https://github.com/LavenderPerry/minecraft_battle_pass",
     "issues": "https://github.com/LavenderPerry/minecraft_battle_pass/issues",
