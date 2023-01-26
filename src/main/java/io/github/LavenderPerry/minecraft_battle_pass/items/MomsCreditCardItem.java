@@ -38,7 +38,7 @@ public class MomsCreditCardItem extends Item {
 
   @Override
   public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
-    if (world.isClient()) {
+    if (!world.isClient()) {
       switch (random.nextInt(random_bound)) {
         case 0: // Mom found out
                 // TODO: summon Your Mom

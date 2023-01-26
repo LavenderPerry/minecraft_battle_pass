@@ -61,7 +61,7 @@ public class BattlePassItem extends Item {
   public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
     ItemStack stack = user.getStackInHand(hand);
 
-    if (world.isClient()) {
+    if (!world.isClient()) {
       NbtCompound stackNbt = stack.getOrCreateNbt();
       int level = stackNbt.getInt("level");
       PlayerInventory playerInventory = user.getInventory();
